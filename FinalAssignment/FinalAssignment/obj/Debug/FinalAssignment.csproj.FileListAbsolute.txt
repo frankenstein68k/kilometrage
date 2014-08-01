@@ -1,0 +1,5 @@
+C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\bin\FinalAssignment.dll
+C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\bin\FinalAssignment.pdb
+C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.csprojResolveAssemblyReference.cache
+C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.dll
+C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.pdb
