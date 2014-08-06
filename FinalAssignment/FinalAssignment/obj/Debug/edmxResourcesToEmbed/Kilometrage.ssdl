@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KilometrageModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="KilometrageModelStoreContainer">
+    <EntitySet Name="CAR" EntityType="KilometrageModel.Store.CAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FILL_UP" EntityType="KilometrageModel.Store.FILL_UP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MILEAGE_USER" EntityType="KilometrageModel.Store.MILEAGE_USER" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__CAR__USERNAME__34C8D9D1" Association="KilometrageModel.Store.FK__CAR__USERNAME__34C8D9D1">
+      <End Role="MILEAGE_USER" EntitySet="MILEAGE_USER" />
+      <End Role="CAR" EntitySet="CAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FILL_UP__GAS_STA__36B12243" Association="KilometrageModel.Store.FK__FILL_UP__GAS_STA__36B12243">
+      <End Role="CAR" EntitySet="CAR" />
+      <End Role="FILL_UP" EntitySet="FILL_UP" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CAR">
+    <Key>
+      <PropertyRef Name="CAR_ID" />
+    </Key>
+    <Property Name="USERNAME" Type="varchar" MaxLength="40" />
+    <Property Name="CAR_MAKE" Type="varchar" MaxLength="40" />
+    <Property Name="CAR_MODEL" Type="varchar" MaxLength="40" />
+    <Property Name="CAR_YEAR" Type="int" />
+    <Property Name="CAR_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="FILL_UP">
+    <Key>
+      <PropertyRef Name="FILL_UP_ID" />
+    </Key>
+    <Property Name="CAR_ID" Type="int" />
+    <Property Name="FILL_UP_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LITRES_IN" Type="int" />
+    <Property Name="GAS_STATION_BRAND" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="MILEAGE_USER">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+    </Key>
+    <Property Name="USERNAME" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="FNAME" Type="varchar" MaxLength="50" />
+    <Property Name="LNAME" Type="varchar" MaxLength="50" />
+    <Property Name="OUTPUT_PREF" Type="int" />
+  </EntityType>
+  <Association Name="FK__CAR__USERNAME__34C8D9D1">
+    <End Role="MILEAGE_USER" Type="KilometrageModel.Store.MILEAGE_USER" Multiplicity="0..1" />
+    <End Role="CAR" Type="KilometrageModel.Store.CAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MILEAGE_USER">
+        <PropertyRef Name="USERNAME" />
+      </Principal>
+      <Dependent Role="CAR">
+        <PropertyRef Name="USERNAME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FILL_UP__GAS_STA__36B12243">
+    <End Role="CAR" Type="KilometrageModel.Store.CAR" Multiplicity="0..1" />
+    <End Role="FILL_UP" Type="KilometrageModel.Store.FILL_UP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAR">
+        <PropertyRef Name="CAR_ID" />
+      </Principal>
+      <Dependent Role="FILL_UP">
+        <PropertyRef Name="CAR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

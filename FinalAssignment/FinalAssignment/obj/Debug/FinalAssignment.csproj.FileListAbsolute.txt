@@ -3,3 +3,5 @@ C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\Fi
 C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.csprojResolveAssemblyReference.cache
 C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.dll
 C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.pdb
+C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\bin\EntityFramework.dll
+C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\bin\EntityFramework.xml

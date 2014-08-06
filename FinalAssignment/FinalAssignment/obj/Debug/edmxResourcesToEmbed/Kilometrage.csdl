@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KilometrageModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="KilometrageEntities1" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CARs" EntityType="KilometrageModel.CAR" />
+    <EntitySet Name="FILL_UP" EntityType="KilometrageModel.FILL_UP" />
+    <EntitySet Name="MILEAGE_USER" EntityType="KilometrageModel.MILEAGE_USER" />
+    <AssociationSet Name="FK__CAR__USERNAME__34C8D9D1" Association="KilometrageModel.FK__CAR__USERNAME__34C8D9D1">
+      <End Role="MILEAGE_USER" EntitySet="MILEAGE_USER" />
+      <End Role="CAR" EntitySet="CARs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FILL_UP__GAS_STA__36B12243" Association="KilometrageModel.FK__FILL_UP__GAS_STA__36B12243">
+      <End Role="CAR" EntitySet="CARs" />
+      <End Role="FILL_UP" EntitySet="FILL_UP" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CAR">
+    <Key>
+      <PropertyRef Name="CAR_ID" />
+    </Key>
+    <Property Name="USERNAME" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="CAR_MAKE" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="CAR_MODEL" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="CAR_YEAR" Type="Int32" />
+    <Property Name="CAR_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="MILEAGE_USER" Relationship="KilometrageModel.FK__CAR__USERNAME__34C8D9D1" FromRole="CAR" ToRole="MILEAGE_USER" />
+    <NavigationProperty Name="FILL_UP" Relationship="KilometrageModel.FK__FILL_UP__GAS_STA__36B12243" FromRole="CAR" ToRole="FILL_UP" />
+  </EntityType>
+  <EntityType Name="FILL_UP">
+    <Key>
+      <PropertyRef Name="FILL_UP_ID" />
+    </Key>
+    <Property Name="CAR_ID" Type="Int32" />
+    <Property Name="FILL_UP_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="LITRES_IN" Type="Int32" />
+    <Property Name="GAS_STATION_BRAND" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CAR" Relationship="KilometrageModel.FK__FILL_UP__GAS_STA__36B12243" FromRole="FILL_UP" ToRole="CAR" />
+  </EntityType>
+  <EntityType Name="MILEAGE_USER">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+    </Key>
+    <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="FNAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LNAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OUTPUT_PREF" Type="Int32" />
+    <NavigationProperty Name="CARs" Relationship="KilometrageModel.FK__CAR__USERNAME__34C8D9D1" FromRole="MILEAGE_USER" ToRole="CAR" />
+  </EntityType>
+  <Association Name="FK__CAR__USERNAME__34C8D9D1">
+    <End Role="MILEAGE_USER" Type="KilometrageModel.MILEAGE_USER" Multiplicity="0..1" />
+    <End Role="CAR" Type="KilometrageModel.CAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MILEAGE_USER">
+        <PropertyRef Name="USERNAME" />
+      </Principal>
+      <Dependent Role="CAR">
+        <PropertyRef Name="USERNAME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FILL_UP__GAS_STA__36B12243">
+    <End Role="CAR" Type="KilometrageModel.CAR" Multiplicity="0..1" />
+    <End Role="FILL_UP" Type="KilometrageModel.FILL_UP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAR">
+        <PropertyRef Name="CAR_ID" />
+      </Principal>
+      <Dependent Role="FILL_UP">
+        <PropertyRef Name="CAR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

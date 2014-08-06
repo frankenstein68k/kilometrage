@@ -38,7 +38,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -62,12 +68,36 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAR.cs">
+      <DependentUpon>Kilometrage.tt</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FILL_UP.cs">
+      <DependentUpon>Kilometrage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kilometrage.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kilometrage.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kilometrage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kilometrage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kilometrage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kilometrage.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MILEAGE_USER.cs">
+      <DependentUpon>Kilometrage.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -80,12 +110,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
+    <Content Include="packages.config" />
+    <EntityDeploy Include="Kilometrage.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Kilometrage.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Kilometrage.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Kilometrage.edmx</DependentUpon>
+      <LastGenOutput>Kilometrage.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Kilometrage.edmx.diagram">
+      <DependentUpon>Kilometrage.edmx</DependentUpon>
+    </Content>
+    <Content Include="Kilometrage.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Kilometrage.edmx</DependentUpon>
+      <LastGenOutput>Kilometrage.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KilometrageModelStoreContainer" CdmEntityContainer="KilometrageEntities1">
+    <EntitySetMapping Name="CARs">
+      <EntityTypeMapping TypeName="KilometrageModel.CAR">
+        <MappingFragment StoreEntitySet="CAR">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="CAR_MAKE" ColumnName="CAR_MAKE" />
+          <ScalarProperty Name="CAR_MODEL" ColumnName="CAR_MODEL" />
+          <ScalarProperty Name="CAR_YEAR" ColumnName="CAR_YEAR" />
+          <ScalarProperty Name="CAR_ID" ColumnName="CAR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FILL_UP">
+      <EntityTypeMapping TypeName="KilometrageModel.FILL_UP">
+        <MappingFragment StoreEntitySet="FILL_UP">
+          <ScalarProperty Name="CAR_ID" ColumnName="CAR_ID" />
+          <ScalarProperty Name="FILL_UP_ID" ColumnName="FILL_UP_ID" />
+          <ScalarProperty Name="LITRES_IN" ColumnName="LITRES_IN" />
+          <ScalarProperty Name="GAS_STATION_BRAND" ColumnName="GAS_STATION_BRAND" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MILEAGE_USER">
+      <EntityTypeMapping TypeName="KilometrageModel.MILEAGE_USER">
+        <MappingFragment StoreEntitySet="MILEAGE_USER">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="FNAME" ColumnName="FNAME" />
+          <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+          <ScalarProperty Name="OUTPUT_PREF" ColumnName="OUTPUT_PREF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
