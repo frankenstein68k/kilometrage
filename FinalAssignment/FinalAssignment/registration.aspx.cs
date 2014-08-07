@@ -20,28 +20,28 @@ namespace FinalAssignment
             //Step 1 - reference the entity model
             using (KilometrageEntities1 objEnt = new KilometrageEntities1())
             {
-                //Creating a new supplier object from the EF
+                //Creating a new User object from the EF
                 MILEAGE_USER objU;
-
-                //This will be used for creating New users and Updating users
-                //The if checks for Username, if it's not blank it retrieves the data
-                //The else for creating new users
-                //if (crazyiness)
-                //{
-                //}
-                //else
-                //{
+                //Creating a new Car object from the EF
+                CAR objC;
+                
                 objU = new MILEAGE_USER();
                 objEnt.MILEAGE_USER.Add(objU);
-                //}
+                objC = new CAR();
+                objEnt.CARs.Add(objC);
 
                 //takes the data from the form and assigns it to the object
+                //Human related information
                 objU.USERNAME = txtUsername.Text;
                 objU.FNAME = txtFirstname.Text;
                 objU.LNAME = txtLastname.Text;
-                //can't think of a better way right now
-                string rbutton = rdbOutputPref.SelectedItem.Value;
-                objU.OUTPUT_PREF = int.Parse(rbutton);
+                objU.OUTPUT_PREF = int.Parse(rdbOutputPref.SelectedItem.Value);
+                //Car related information
+                objC.USERNAME = txtUsername.Text;
+                objC.CAR_MAKE = txtCarMake.Text;
+                objC.CAR_MODEL = txtCarModel.Text;
+                objC.CAR_YEAR = int.Parse(txtCarYear.Text);
+                
 
                 //invokes the save
                 objEnt.SaveChanges();

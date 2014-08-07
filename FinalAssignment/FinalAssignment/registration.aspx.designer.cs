@@ -49,6 +49,42 @@ namespace FinalAssignment {
         protected global::System.Web.UI.WebControls.RadioButtonList rdbOutputPref;
         
         /// <summary>
+        /// txtCarMake control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCarMake;
+        
+        /// <summary>
+        /// txtCarModel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCarModel;
+        
+        /// <summary>
+        /// txtCarYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCarYear;
+        
+        /// <summary>
+        /// txtCarYearChecker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator txtCarYearChecker;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>
