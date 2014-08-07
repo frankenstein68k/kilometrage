@@ -63,6 +63,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="congratulations.aspx" />
     <Content Include="default.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="StyleSheet.css" />
@@ -71,6 +72,13 @@
   <ItemGroup>
     <Compile Include="CAR.cs">
       <DependentUpon>Kilometrage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="congratulations.aspx.cs">
+      <DependentUpon>congratulations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="congratulations.aspx.designer.cs">
+      <DependentUpon>congratulations.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>

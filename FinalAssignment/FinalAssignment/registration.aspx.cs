@@ -45,6 +45,9 @@ namespace FinalAssignment
 
                 //invokes the save
                 objEnt.SaveChanges();
+                
+                //redirects you to the congraulations page
+                //Server.Transfer("congraulations.aspx", true);
             }
         }
 
