@@ -23,9 +23,12 @@
         you can figure subtract fuel added from the tank capacity to get the amount of fuel used.</p>
     <p>Now that you know the distance travelled and the fuel consumed you can calculat your mileage, or we like to say your KILOMETRAGE!</p>
 
-    <h4>Join the site</h4>
-
-    <h4>Already a member?</h4>
+    <h4>
+        <a href="registration.aspx">Join the site</a>
+    </h4>
+    <h4>
+        <a href="asdf.aspx">Already a member?</a>
+    </h4>
 
     <image src="http://backtothewild.com/BTTWImages/Made_With_a_Mac.gif" alt="Old School Son!"></image>
 </asp:Content>
