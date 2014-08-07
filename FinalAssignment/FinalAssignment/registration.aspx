@@ -62,6 +62,6 @@
             ErrorMessage="Please enter a model year between 1904 and 2020" MinimumValue="1904" MaximumValue="2020" 
             ControlToValidate="txtCarYear" Display="Dynamic"></asp:RangeValidator>
     </div>
-    Please click the save button to save and continue the registration.
+    <h3>Please click the save button to save and continue the registration.</h3>
     <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"/>
 </asp:Content>

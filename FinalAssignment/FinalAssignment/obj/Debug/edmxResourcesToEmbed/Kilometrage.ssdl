@@ -8,7 +8,7 @@
       <End Role="MILEAGE_USER" EntitySet="MILEAGE_USER" />
       <End Role="CAR" EntitySet="CAR" />
     </AssociationSet>
-    <AssociationSet Name="FK__FILL_UP__GAS_STA__36B12243" Association="KilometrageModel.Store.FK__FILL_UP__GAS_STA__36B12243">
+    <AssociationSet Name="FK__FILL_UP__GAS_STA__5070F446" Association="KilometrageModel.Store.FK__FILL_UP__GAS_STA__5070F446">
       <End Role="CAR" EntitySet="CAR" />
       <End Role="FILL_UP" EntitySet="FILL_UP" />
     </AssociationSet>
@@ -29,8 +29,8 @@
     </Key>
     <Property Name="CAR_ID" Type="int" />
     <Property Name="FILL_UP_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="LITRES_IN" Type="int" />
-    <Property Name="GAS_STATION_BRAND" Type="varchar" MaxLength="40" />
+    <Property Name="LITRES_IN" Type="decimal" Precision="6" Scale="3" />
+    <Property Name="GAS_STATION_BRAND" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="MILEAGE_USER">
     <Key>
@@ -53,7 +53,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__FILL_UP__GAS_STA__36B12243">
+  <Association Name="FK__FILL_UP__GAS_STA__5070F446">
     <End Role="CAR" Type="KilometrageModel.Store.CAR" Multiplicity="0..1" />
     <End Role="FILL_UP" Type="KilometrageModel.Store.FILL_UP" Multiplicity="*" />
     <ReferentialConstraint>

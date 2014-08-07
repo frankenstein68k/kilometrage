@@ -16,7 +16,7 @@ namespace FinalAssignment
     {
         public Nullable<int> CAR_ID { get; set; }
         public int FILL_UP_ID { get; set; }
-        public Nullable<int> LITRES_IN { get; set; }
+        public Nullable<decimal> LITRES_IN { get; set; }
         public string GAS_STATION_BRAND { get; set; }
     
         public virtual CAR CAR { get; set; }

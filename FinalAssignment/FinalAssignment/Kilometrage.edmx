@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="KilometrageModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="KilometrageModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="KilometrageModelStoreContainer">
           <EntitySet Name="CAR" EntityType="KilometrageModel.Store.CAR" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="FILL_UP" EntityType="KilometrageModel.Store.FILL_UP" store:Type="Tables" Schema="dbo" />
@@ -13,7 +13,7 @@
             <End Role="MILEAGE_USER" EntitySet="MILEAGE_USER" />
             <End Role="CAR" EntitySet="CAR" />
           </AssociationSet>
-          <AssociationSet Name="FK__FILL_UP__GAS_STA__36B12243" Association="KilometrageModel.Store.FK__FILL_UP__GAS_STA__36B12243">
+          <AssociationSet Name="FK__FILL_UP__GAS_STA__5070F446" Association="KilometrageModel.Store.FK__FILL_UP__GAS_STA__5070F446">
             <End Role="CAR" EntitySet="CAR" />
             <End Role="FILL_UP" EntitySet="FILL_UP" />
           </AssociationSet>
@@ -34,8 +34,8 @@
           </Key>
           <Property Name="CAR_ID" Type="int" />
           <Property Name="FILL_UP_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="LITRES_IN" Type="int" />
-          <Property Name="GAS_STATION_BRAND" Type="varchar" MaxLength="40" />
+          <Property Name="LITRES_IN" Type="decimal" Precision="6" Scale="3" />
+          <Property Name="GAS_STATION_BRAND" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="MILEAGE_USER">
           <Key>
@@ -58,7 +58,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FILL_UP__GAS_STA__36B12243">
+        <Association Name="FK__FILL_UP__GAS_STA__5070F446">
           <End Role="CAR" Type="KilometrageModel.Store.CAR" Multiplicity="0..1" />
           <End Role="FILL_UP" Type="KilometrageModel.Store.FILL_UP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -70,12 +70,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KilometrageModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="KilometrageEntities1" p1:LazyLoadingEnabled="true">
+        <EntityContainer Name="KilometrageEntities" p1:LazyLoadingEnabled="true">
           <EntitySet Name="CARs" EntityType="KilometrageModel.CAR" />
           <EntitySet Name="FILL_UP" EntityType="KilometrageModel.FILL_UP" />
           <EntitySet Name="MILEAGE_USER" EntityType="KilometrageModel.MILEAGE_USER" />
@@ -83,7 +82,7 @@
             <End Role="MILEAGE_USER" EntitySet="MILEAGE_USER" />
             <End Role="CAR" EntitySet="CARs" />
           </AssociationSet>
-          <AssociationSet Name="FK__FILL_UP__GAS_STA__36B12243" Association="KilometrageModel.FK__FILL_UP__GAS_STA__36B12243">
+          <AssociationSet Name="FK__FILL_UP__GAS_STA__4D94879B" Association="KilometrageModel.FK__FILL_UP__GAS_STA__4D94879B">
             <End Role="CAR" EntitySet="CARs" />
             <End Role="FILL_UP" EntitySet="FILL_UP" />
           </AssociationSet>
@@ -98,7 +97,7 @@
           <Property Name="CAR_YEAR" Type="Int32" />
           <Property Name="CAR_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="MILEAGE_USER" Relationship="KilometrageModel.FK__CAR__USERNAME__34C8D9D1" FromRole="CAR" ToRole="MILEAGE_USER" />
-          <NavigationProperty Name="FILL_UP" Relationship="KilometrageModel.FK__FILL_UP__GAS_STA__36B12243" FromRole="CAR" ToRole="FILL_UP" />
+          <NavigationProperty Name="FILL_UP" Relationship="KilometrageModel.FK__FILL_UP__GAS_STA__4D94879B" FromRole="CAR" ToRole="FILL_UP" />
         </EntityType>
         <EntityType Name="FILL_UP">
           <Key>
@@ -106,9 +105,9 @@
           </Key>
           <Property Name="CAR_ID" Type="Int32" />
           <Property Name="FILL_UP_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="LITRES_IN" Type="Int32" />
-          <Property Name="GAS_STATION_BRAND" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="CAR" Relationship="KilometrageModel.FK__FILL_UP__GAS_STA__36B12243" FromRole="FILL_UP" ToRole="CAR" />
+          <Property Name="LITRES_IN" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="GAS_STATION_BRAND" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CAR" Relationship="KilometrageModel.FK__FILL_UP__GAS_STA__4D94879B" FromRole="FILL_UP" ToRole="CAR" />
         </EntityType>
         <EntityType Name="MILEAGE_USER">
           <Key>
@@ -132,7 +131,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FILL_UP__GAS_STA__36B12243">
+        <Association Name="FK__FILL_UP__GAS_STA__4D94879B">
           <End Role="CAR" Type="KilometrageModel.CAR" Multiplicity="0..1" />
           <End Role="FILL_UP" Type="KilometrageModel.FILL_UP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -149,7 +148,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="KilometrageModelStoreContainer" CdmEntityContainer="KilometrageEntities1">
+        <EntityContainerMapping StorageEntityContainer="KilometrageModelStoreContainer" CdmEntityContainer="KilometrageEntities">
           <EntitySetMapping Name="CARs">
             <EntityTypeMapping TypeName="KilometrageModel.CAR">
               <MappingFragment StoreEntitySet="CAR">

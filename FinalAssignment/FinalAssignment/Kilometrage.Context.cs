@@ -13,10 +13,10 @@ namespace FinalAssignment
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class KilometrageEntities1 : DbContext
+    public partial class KilometrageEntities : DbContext
     {
-        public KilometrageEntities1()
-            : base("name=KilometrageEntities1")
+        public KilometrageEntities()
+            : base("name=KilometrageEntities")
         {
         }
     

@@ -18,7 +18,7 @@ namespace FinalAssignment
         {
             //Using the EF to inser the data from the form into the database
             //Step 1 - reference the entity model
-            using (KilometrageEntities1 objEnt = new KilometrageEntities1())
+            using (KilometrageEntities objEnt = new KilometrageEntities())
             {
                 //Creating a new User object from the EF
                 MILEAGE_USER objU;
@@ -42,7 +42,6 @@ namespace FinalAssignment
                 objC.CAR_MODEL = txtCarModel.Text;
                 objC.CAR_YEAR = int.Parse(txtCarYear.Text);
                 
-
                 //invokes the save
                 objEnt.SaveChanges();
                 

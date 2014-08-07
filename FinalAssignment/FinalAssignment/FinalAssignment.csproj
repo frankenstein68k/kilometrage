@@ -63,6 +63,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addnewmileage.aspx" />
     <Content Include="congratulations.aspx" />
     <Content Include="default.aspx" />
     <Content Include="registration.aspx" />
@@ -70,8 +71,15 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addnewmileage.aspx.cs">
+      <DependentUpon>addnewmileage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addnewmileage.aspx.designer.cs">
+      <DependentUpon>addnewmileage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CAR.cs">
-      <DependentUpon>Kilometrage.tt</DependentUpon>
+      <DependentUpon>kilometrage.tt</DependentUpon>
     </Compile>
     <Compile Include="congratulations.aspx.cs">
       <DependentUpon>congratulations.aspx</DependentUpon>
@@ -88,25 +96,25 @@
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="FILL_UP.cs">
-      <DependentUpon>Kilometrage.tt</DependentUpon>
+      <DependentUpon>kilometrage.tt</DependentUpon>
     </Compile>
-    <Compile Include="Kilometrage.Context.cs">
+    <Compile Include="kilometrage.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Kilometrage.Context.tt</DependentUpon>
+      <DependentUpon>kilometrage.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Kilometrage.cs">
+    <Compile Include="kilometrage.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Kilometrage.tt</DependentUpon>
+      <DependentUpon>kilometrage.tt</DependentUpon>
     </Compile>
-    <Compile Include="Kilometrage.Designer.cs">
+    <Compile Include="kilometrage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Kilometrage.edmx</DependentUpon>
+      <DependentUpon>kilometrage.edmx</DependentUpon>
     </Compile>
     <Compile Include="MILEAGE_USER.cs">
-      <DependentUpon>Kilometrage.tt</DependentUpon>
+      <DependentUpon>kilometrage.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registration.aspx.cs">
@@ -127,22 +135,22 @@
   <ItemGroup>
     <Content Include="Site.Master" />
     <Content Include="packages.config" />
-    <EntityDeploy Include="Kilometrage.edmx">
+    <EntityDeploy Include="kilometrage.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Kilometrage.Designer.cs</LastGenOutput>
+      <LastGenOutput>kilometrage.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Kilometrage.Context.tt">
+    <Content Include="kilometrage.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Kilometrage.edmx</DependentUpon>
-      <LastGenOutput>Kilometrage.Context.cs</LastGenOutput>
+      <DependentUpon>kilometrage.edmx</DependentUpon>
+      <LastGenOutput>kilometrage.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Kilometrage.edmx.diagram">
-      <DependentUpon>Kilometrage.edmx</DependentUpon>
+    <Content Include="kilometrage.edmx.diagram">
+      <DependentUpon>kilometrage.edmx</DependentUpon>
     </Content>
-    <Content Include="Kilometrage.tt">
+    <Content Include="kilometrage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Kilometrage.edmx</DependentUpon>
-      <LastGenOutput>Kilometrage.cs</LastGenOutput>
+      <DependentUpon>kilometrage.edmx</DependentUpon>
+      <LastGenOutput>kilometrage.cs</LastGenOutput>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
