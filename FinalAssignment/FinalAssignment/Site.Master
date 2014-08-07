@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Kilometrage</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="StyleSheet.css" rel="stylesheet" />
@@ -12,14 +12,15 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div>
             <header>This is where the head goes</header>
             <asp:Label ID="Label1" runat="server" Text="Test 123 Kilometrage"></asp:Label>
             <h1>CONTENT!!!!</h1>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
             <footer>Foot goes here</footer>
-        </asp:ContentPlaceHolder>
-    </div>
+
+        </div>
     </form>
 </body>
 </html>

@@ -46,7 +46,11 @@ namespace FinalAssignment
                 objEnt.SaveChanges();
                 
                 //redirects you to the congraulations page
-                //Server.Transfer("congraulations.aspx", true);
+                
+                //Response.Redirect("congratulations.aspx");
+
+                Session["username"] = objU.USERNAME;
+                Server.Transfer("congratulations.aspx", true);
             }
         }
 
