@@ -16,7 +16,7 @@ namespace FinalAssignment
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            //Using the EF to inser the data from the form into the database
+            //Using the EF to insert the data from the form into the database
             //Step 1 - reference the entity model
             using (KilometrageEntities objEnt = new KilometrageEntities())
             {

@@ -14,7 +14,7 @@ namespace FinalAssignment
             if (Session["username"] == null)
             {
                 //Redirects user to the login if they are not authenticated
-                Server.Transfer("login.aspx", true);
+                //Server.Transfer("login.aspx", true);
             }
         }
     }

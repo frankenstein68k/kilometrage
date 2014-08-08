@@ -31,7 +31,7 @@
             <a href="registration.aspx">Join the site</a>
         </h4>
         <h4>
-            <a href="asdf.aspx">Already a member?</a>
+            <a href="login.aspx">Already a member?</a>
         </h4>
 
         <image src="http://backtothewild.com/BTTWImages/Made_With_a_Mac.gif" alt="Old School Son!"></image>

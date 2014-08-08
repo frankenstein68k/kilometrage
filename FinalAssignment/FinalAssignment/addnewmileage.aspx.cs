@@ -11,7 +11,11 @@ namespace FinalAssignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["username"] == null)
+            {
+                //Redirects user to the login if they are not authenticated
+                //Server.Transfer("login.aspx", true);
+            }
         }
 
         protected void btnSave_Click(object sender, EventArgs e)

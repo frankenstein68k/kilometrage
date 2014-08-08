@@ -4,7 +4,6 @@ C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\Fi
 C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\bin\EntityFramework.xml
 C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.dll
 C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.pdb
-C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.csprojResolveAssemblyReference.cache
 C:\Users\Neil\Documents\GitHub\kilometrage\FinalAssignment\FinalAssignment\bin\FinalAssignment.dll
 C:\Users\Neil\Documents\GitHub\kilometrage\FinalAssignment\FinalAssignment\bin\FinalAssignment.pdb
 C:\Users\Neil\Documents\GitHub\kilometrage\FinalAssignment\FinalAssignment\bin\EntityFramework.dll
@@ -12,3 +11,4 @@ C:\Users\Neil\Documents\GitHub\kilometrage\FinalAssignment\FinalAssignment\bin\E
 C:\Users\Neil\Documents\GitHub\kilometrage\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.csprojResolveAssemblyReference.cache
 C:\Users\Neil\Documents\GitHub\kilometrage\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.dll
 C:\Users\Neil\Documents\GitHub\kilometrage\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.pdb
+C:\Users\Neil\Documents\GitHub\EnterpriseComputingAssignment2\FinalAssignment\FinalAssignment\obj\Debug\FinalAssignment.csprojResolveAssemblyReference.cache

@@ -11,7 +11,8 @@ namespace FinalAssignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Trying test my session variable, unsuccessfully
+           //Label1.Text = Session["username"].ToString();
         }
     }
 }
