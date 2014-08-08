@@ -17,9 +17,9 @@
     <Key>
       <PropertyRef Name="CAR_ID" />
     </Key>
-    <Property Name="USERNAME" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
-    <Property Name="CAR_MAKE" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
-    <Property Name="CAR_MODEL" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CAR_MAKE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CAR_MODEL" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
     <Property Name="CAR_YEAR" Type="Int32" />
     <Property Name="CAR_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="MILEAGE_USER" Relationship="KilometrageModel.FK__CAR__USERNAME__34C8D9D1" FromRole="CAR" ToRole="MILEAGE_USER" />
@@ -39,11 +39,12 @@
     <Key>
       <PropertyRef Name="USERNAME" />
     </Key>
-    <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
-    <Property Name="FNAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="LNAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="FNAME" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="LNAME" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
     <Property Name="OUTPUT_PREF" Type="Int32" />
     <NavigationProperty Name="CARs" Relationship="KilometrageModel.FK__CAR__USERNAME__34C8D9D1" FromRole="MILEAGE_USER" ToRole="CAR" />
+    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK__CAR__USERNAME__34C8D9D1">
     <End Role="MILEAGE_USER" Type="KilometrageModel.MILEAGE_USER" Multiplicity="0..1" />

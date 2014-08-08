@@ -25,6 +25,7 @@
     <EntitySetMapping Name="MILEAGE_USER">
       <EntityTypeMapping TypeName="KilometrageModel.MILEAGE_USER">
         <MappingFragment StoreEntitySet="MILEAGE_USER">
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
           <ScalarProperty Name="FNAME" ColumnName="FNAME" />
           <ScalarProperty Name="LNAME" ColumnName="LNAME" />

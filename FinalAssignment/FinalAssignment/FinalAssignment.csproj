@@ -66,6 +66,9 @@
     <Content Include="addnewmileage.aspx" />
     <Content Include="congratulations.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="editmileage.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="overview.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
@@ -95,6 +98,13 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="editmileage.aspx.cs">
+      <DependentUpon>editmileage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editmileage.aspx.designer.cs">
+      <DependentUpon>editmileage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FILL_UP.cs">
       <DependentUpon>kilometrage.tt</DependentUpon>
     </Compile>
@@ -113,8 +123,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>kilometrage.edmx</DependentUpon>
     </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MILEAGE_USER.cs">
       <DependentUpon>kilometrage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="overview.aspx.cs">
+      <DependentUpon>overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="overview.aspx.designer.cs">
+      <DependentUpon>overview.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registration.aspx.cs">

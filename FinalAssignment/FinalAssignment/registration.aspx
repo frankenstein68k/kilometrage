@@ -18,15 +18,23 @@
         <div>
             <label for="txtFirstname">First Name:</label>
             <asp:TextBox ID="txtFirstname" runat="server" />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="You need to enter your first name"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please senter your first name"
                 ControlToValidate="txtFirstname" Display="Dynamic"></asp:RequiredFieldValidator>
         </div>
         <div>
             <label for="txtLastname">Last Name:</label>
             <asp:TextBox ID="txtLastname" runat="server" />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="You need to enter your first name"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter your first name"
                 ControlToValidate="txtLastname" Display="Dynamic"></asp:RequiredFieldValidator>
-
+        </div>
+        <div>
+            <label for="txtPassword">Password</label>
+            <asp:TextBox ID="txtPassword" runat="server" />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please enter a password"
+                ControlToValidate="txtPassword" Display="Dynamic">
+            </asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Please enter a password greater than 4 characters but less than 20 and that has 1 uppercase and 1 lowercase letter plus a number"
+                ControlToValidate="txtPassword" Display="Dynamic" ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,20}$" />
         </div>
         <div>
             <label for="rdbOutputPref">Output Preference:</label>

@@ -25,10 +25,10 @@ namespace FinalAssignment
                 //Creating a new Car object from the EF
                 CAR objC;
                 
+                //Fills objects with tables from database
                 objU = new MILEAGE_USER();
-                objEnt.MILEAGE_USER.Add(objU);
                 objC = new CAR();
-                objEnt.CARs.Add(objC);
+
 
                 //takes the data from the form and assigns it to the object
                 //Human related information
@@ -36,20 +36,25 @@ namespace FinalAssignment
                 objU.FNAME = txtFirstname.Text;
                 objU.LNAME = txtLastname.Text;
                 objU.OUTPUT_PREF = int.Parse(rdbOutputPref.SelectedItem.Value);
+                objU.PASSWORD = txtPassword.Text;
+
                 //Car related information
                 objC.USERNAME = txtUsername.Text;
                 objC.CAR_MAKE = txtCarMake.Text;
                 objC.CAR_MODEL = txtCarModel.Text;
                 objC.CAR_YEAR = int.Parse(txtCarYear.Text);
-                
+
+                //Adds objects back to the tables
+                objEnt.CARs.Add(objC);
+                objEnt.MILEAGE_USER.Add(objU);
+
                 //invokes the save
                 objEnt.SaveChanges();
                 
-                //redirects you to the congraulations page
-                
-                //Response.Redirect("congratulations.aspx");
-
+                //Saves Username of the newly created user to a session variable
                 Session["username"] = objU.USERNAME;
+
+                //redirects you to the congraulations page
                 Server.Transfer("congratulations.aspx", true);
             }
         }

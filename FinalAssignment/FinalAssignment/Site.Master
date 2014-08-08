@@ -13,13 +13,23 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <header>This is where the head goes</header>
-            <asp:Label ID="Label1" runat="server" Text="Test 123 Kilometrage"></asp:Label>
-            <h1>CONTENT!!!!</h1>
+            <div id="navbar">
+                <nav>
+                    <a href="default.aspx" title="Home">Home</a>
+                    <a href="registration.aspx" title="Register Now">Register Now</a>
+                    <a href="login.aspx" title="Login">Login</a>
+                    <a href="addnewmileage.aspx" title="Add New Mileage">Add New Mileage</a>
+                    <a href="overview.aspx" title="View your Mileage">View Your mileage</a>
+                    <a href="editmileage.aspx" title="Edit Mileage">Edit Mileage</a>
+                    <h3>dfsd</h3>
+                </nav>
+            </div>
+            <label>Ta fuck?</label>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            <footer>Foot goes here</footer>
-
+            <footer>
+                Neil MacKenzie - Georgian College - Enterprise Computing
+            </footer>
         </div>
     </form>
 </body>

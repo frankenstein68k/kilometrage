@@ -23,6 +23,7 @@ namespace FinalAssignment
         public string FNAME { get; set; }
         public string LNAME { get; set; }
         public Nullable<int> OUTPUT_PREF { get; set; }
+        public string PASSWORD { get; set; }
     
         public virtual ICollection<CAR> CARs { get; set; }
     }

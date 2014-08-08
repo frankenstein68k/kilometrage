@@ -4,11 +4,11 @@
     <EntitySet Name="CAR" EntityType="KilometrageModel.Store.CAR" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="FILL_UP" EntityType="KilometrageModel.Store.FILL_UP" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MILEAGE_USER" EntityType="KilometrageModel.Store.MILEAGE_USER" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK__CAR__USERNAME__34C8D9D1" Association="KilometrageModel.Store.FK__CAR__USERNAME__34C8D9D1">
+    <AssociationSet Name="FK__CAR__USERNAME__5535A963" Association="KilometrageModel.Store.FK__CAR__USERNAME__5535A963">
       <End Role="MILEAGE_USER" EntitySet="MILEAGE_USER" />
       <End Role="CAR" EntitySet="CAR" />
     </AssociationSet>
-    <AssociationSet Name="FK__FILL_UP__GAS_STA__5070F446" Association="KilometrageModel.Store.FK__FILL_UP__GAS_STA__5070F446">
+    <AssociationSet Name="FK__FILL_UP__GAS_STA__5812160E" Association="KilometrageModel.Store.FK__FILL_UP__GAS_STA__5812160E">
       <End Role="CAR" EntitySet="CAR" />
       <End Role="FILL_UP" EntitySet="FILL_UP" />
     </AssociationSet>
@@ -17,9 +17,9 @@
     <Key>
       <PropertyRef Name="CAR_ID" />
     </Key>
-    <Property Name="USERNAME" Type="varchar" MaxLength="40" />
-    <Property Name="CAR_MAKE" Type="varchar" MaxLength="40" />
-    <Property Name="CAR_MODEL" Type="varchar" MaxLength="40" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="20" />
+    <Property Name="CAR_MAKE" Type="varchar" MaxLength="20" />
+    <Property Name="CAR_MODEL" Type="varchar" MaxLength="20" />
     <Property Name="CAR_YEAR" Type="int" />
     <Property Name="CAR_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
@@ -36,12 +36,13 @@
     <Key>
       <PropertyRef Name="USERNAME" />
     </Key>
-    <Property Name="USERNAME" Type="varchar" Nullable="false" MaxLength="40" />
-    <Property Name="FNAME" Type="varchar" MaxLength="50" />
-    <Property Name="LNAME" Type="varchar" MaxLength="50" />
+    <Property Name="USERNAME" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FNAME" Type="varchar" MaxLength="30" />
+    <Property Name="LNAME" Type="varchar" MaxLength="30" />
     <Property Name="OUTPUT_PREF" Type="int" />
+    <Property Name="PASSWORD" Type="varchar" Nullable="false" MaxLength="20" />
   </EntityType>
-  <Association Name="FK__CAR__USERNAME__34C8D9D1">
+  <Association Name="FK__CAR__USERNAME__5535A963">
     <End Role="MILEAGE_USER" Type="KilometrageModel.Store.MILEAGE_USER" Multiplicity="0..1" />
     <End Role="CAR" Type="KilometrageModel.Store.CAR" Multiplicity="*" />
     <ReferentialConstraint>
@@ -53,7 +54,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__FILL_UP__GAS_STA__5070F446">
+  <Association Name="FK__FILL_UP__GAS_STA__5812160E">
     <End Role="CAR" Type="KilometrageModel.Store.CAR" Multiplicity="0..1" />
     <End Role="FILL_UP" Type="KilometrageModel.Store.FILL_UP" Multiplicity="*" />
     <ReferentialConstraint>
